@@ -1,0 +1,18 @@
+{
+	"name": "Images as Text",
+	"manifest_version": 2,
+	"version": "0.1",
+	"description": "Highlight text in images as if they were plain text",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jsfeat.js", "highlight.js"]
+		}
+	], 
+	"background": {
+		"scripts": ["jsfeat.js", "blob.js", "bg.js"]
+	},
+	"permissions": [
+		"<all_urls>"
+	]
+}
